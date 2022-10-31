@@ -1,3 +1,5 @@
+import os
+
 # Ex 1: Write a program to accept two numbers from the user and calculate multiplication
 def mult():
     num1 = int(input("Enter a number: "))
@@ -36,7 +38,13 @@ createList(len)
 
 
 # Ex 6: Write all content of a given file into a new file by skipping line number 5
-    
+
+# Ex 7: Write a program to take three names as input from a user in the single input() function call.
+str = input("Enter three names separated by a spaceline: ").split(" ")
+cont = 0
+for i in str:
+    print("Name", cont, ":", i)
+    cont += 1
     
     
 
