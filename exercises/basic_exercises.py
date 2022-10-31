@@ -1,5 +1,5 @@
 # Ex: Write a function to return True if the first and last number of
-# a given list is same. If numbers are different then return False.
+# a given list is the same. If numbers are different then return False.
 
 
 numbers_x = [10, 20, 30, 40, 10]
@@ -20,7 +20,7 @@ print(equal(numbers_x))
 print(equal(numbers_y))
 
 
-# Ex: Iterate the given list of numbers and
+# Ex: Iterate a given list of numbers and
 # print only those numbers which are divisible by 5
 
 numbers = [10, 20, 33, 46, 55, 60, 75, 2]
