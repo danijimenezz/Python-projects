@@ -1,3 +1,5 @@
+import math
+
 # Ex 1: Print First 10 natural numbers using while loop
 num = 1
 while num <= 10:
@@ -60,6 +62,7 @@ print("The number", num, "has", digits, "digits")
 num = int(input("Enter a number: "))
 cont = num
 for i in range(num):
+    #range(start, stop, step)
     for j in range(cont, 0, -1):
         print(j, end=" ")
     print()
@@ -68,3 +71,91 @@ for i in range(num):
 
 # Ex 8: Print list in reverse order using a loop
 list1 = [10, 20, 30, 40, 50]
+
+# Solution 1:
+# range(start, stop, step)
+for i in range(len(list1)-1, -1, -1):
+    print(list1[i])
+    
+# Solution 2:
+rev_list = reversed(list1)
+for item in list1:
+    print(item)
+
+
+# Ex 9: Display numbers from -10 to -1 using for loop
+for num in range(-10, 0, 1):
+    print(num)
+    
+    
+# Ex 10: Use else block to display a message “Done” after successful execution of for loop
+for i in range(5):
+    print(i)
+#Else statement executes if loop finsih without errors
+else: 
+    print("Finished!!!")
+    
+    
+# Ex 11: Write a program to display all prime numbers within a range
+def isPrime(num):
+    for i in range(2, int(math.sqrt(num))+1):
+        if num % i==0:
+            return False
+    return True
+
+print("Enter a range")
+start = int(input("From: "))
+stop = int(input("To: "))
+
+for num in range(start, stop+1):
+    if isPrime(num):
+        print(num)
+else: 
+    print("Finished!")
+    
+    
+# Ex 12: Display Fibonacci series up to 10 terms
+long = int(input("How long do you want the Fibonacci series to be? : "))
+last = 1
+llast = 0
+for i in range(long):
+    if i<2:
+        print(i, end=" ")
+    else:
+        num = last + llast
+        print(num, end=" ")
+        llast = last
+        last = num
+        
+
+# Ex 13: Find the factorial of a given number
+num = int(input("Enter a number: "))
+fact = 1
+
+if num < 0:
+    print("Factorial does not exist for negative numbers")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, num+1):
+        fact *= i
+
+print(num, "! =", fact)
+
+
+# Ex 14: Reverse a given integer number
+def reverse(str):
+    return str[::-1]
+
+num = 12345
+print("The reversed number of", num, "is:", reverse(str(num)))
+
+print("Your reversed number is:", int(reverse(input("Enter a number: "))))
+
+
+# Ex 15: Use a loop to display elements from a given list present at odd index positions
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in range(len(my_list)):
+    if i % 2 != 0 and i>0:
+        print(my_list[i])
+    
