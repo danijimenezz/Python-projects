@@ -158,4 +158,27 @@ my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 for i in range(len(my_list)):
     if i % 2 != 0 and i>0:
         print(my_list[i])
+        
+    
+# Ex 16: Calculate the cube of all numbers from 1 to a given number
+num = int(input("Enter a number: "))
+
+for i in range(1, num+1, 1):
+    print(i, "to the cube is:", i**3)
+
+
+# Ex 17: Find the sum of the series upto n terms
+num = int(input("Enter a number: "))
+terms = int(input("Enter the number of terms of the series: "))
+str_n = str(num)
+str_tot = str_n
+sum = 0
+
+for i in range(terms):
+    sum += num
+    str_tot += str_n
+    num = int(str_tot)
+
+print("The total sum of the series is:", sum)
+    
     
