@@ -180,5 +180,29 @@ for i in range(terms):
     num = int(str_tot)
 
 print("The total sum of the series is:", sum)
+
+
+# Ex 18: Print the following pattern
+num = int(input("Enter a number: "))
+cont = 1
+
+for i in range(1, num+1, 1):
+    for j in range(cont):
+        print("*", end=" ")
+    print()
+    cont +=1
+
+cont = num-1
+for i in range(num-1, 0, -1):
+    for j in range(cont):
+        print("*", end=" ")
+    print()
+    cont -=1
+
+
+
+    
+
+
     
     
