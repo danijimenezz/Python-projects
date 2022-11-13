@@ -71,3 +71,81 @@ def countStr(str):
 
 
 countStr("P@#yn26at^&i5ve")  # Exp output: 8, 3, 4
+
+
+# Ex 6: Given two strings, s1 and s2. Write a program to create a new string s3
+# made of the first char of s1, then the last char of s2, Next, the second char
+# of s1 and second last char of s2, and so on.
+# Any leftover chars go at the end of the result.
+def addStrings(s1, s2):
+    # reverse s2
+    s2 = s2[::-1]
+    s3 = ""
+    for i in range(max(len(s1), len(s2))):
+        if i < len(s1):
+            s3 += s1[i]
+        if i < len(s2):
+            s3 += s2[i]
+    return s3
+
+
+print(addStrings("abcde", "123"))  # Ex output: a3b2c1de
+
+
+# Ex 7: Write a program to check if two strings are balanced.
+# example: strings s1 and s2 are balanced if all the characters in the s1 are present in s2.
+# The character’s position doesn’t matter.
+def string_balance_test(s1, s2):
+    balanced = True
+    while balanced == True:
+        for char in s1:
+            if char in s2:
+                continue
+            else:
+                balanced = False
+                break
+        break
+    return balanced
+
+
+print(string_balance_test("Yn", "PYnative"))  # Ex output: True
+print(string_balance_test("wYnx", "PYnative"))  # Ex output: False
+
+
+# Ex 8: Find all occurrences of a substring in a given string by ignoring the case
+str1 = "Welcome to USA. usa awesome, isn't it?"
+word = "usa"
+
+print("The word", word, "appears", str1.casefold().count(word.casefold()), "times")
+
+
+# Ex 9: Calculate the sum and average of the digits present in a string
+def avgDigits(str):
+    suma = 0
+    tot = 0
+    for i in str:
+        if i.isdigit():
+            suma += int(i)
+            tot += 1
+    return suma, suma/tot
+
+
+suma, avg = avgDigits("PYnative29@#8496")
+print("The sum of the digits is:", suma)
+print("The average of the digits is:", avg)
+
+
+# Ex 10: Write a program to count occurrences of all characters within a string
+def charAppr(str):
+    char_dict = dict()
+    for char in str:
+        # add / update the count of a character
+        char_dict[char] = str.count(char)
+    print('Result:', char_dict)
+
+
+charAppr("Apple")
+
+
+# Ex 11: Reverse a given string
+print("You reversed str is:", input("Enter a string: ")[::-1])
