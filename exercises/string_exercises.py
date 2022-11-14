@@ -1,7 +1,7 @@
-# Ex 1A: Create a string made of the first, middle and last character
 import string
 
 
+# Ex 1A: Create a string made of the first, middle and last character
 def slicedString(str):
     res = str[0] + str[int(len(str)/2)] + str[len(str)-1]
     return res
@@ -197,3 +197,23 @@ for i in str1:
         num_str += i
 
 print(num_str)
+
+
+# Ex 17:  Find words with both alphabets and numbers
+str1 = "Emma25 is Data scientist50 and AI Expert"
+
+str_lst = str1.split(" ")
+
+for word in str_lst:
+    # if there's any letter and any number, print word
+    if any(char.isalpha() for char in word) and any(char.isdigit() for char in word):
+        print(word)
+
+
+# Ex 18: Replace each special symbol with # in the following string
+str1 = '/*Jon is @developer & musician!!'
+
+for char in string.punctuation:
+    str1 = str1.replace(char, '#')
+
+print(str1)
