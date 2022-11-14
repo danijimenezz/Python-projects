@@ -1,4 +1,7 @@
 # Ex 1A: Create a string made of the first, middle and last character
+import string
+
+
 def slicedString(str):
     res = str[0] + str[int(len(str)/2)] + str[len(str)-1]
     return res
@@ -149,3 +152,48 @@ charAppr("Apple")
 
 # Ex 11: Reverse a given string
 print("You reversed str is:", input("Enter a string: ")[::-1])
+
+
+# Ex 12: Find the last position of a given substring
+str1 = "Emma is a data scientist who knows Python. Emma works at google."
+word = "Emma"
+print("Last ocurrence of", word, "starts at index", str1.rfind(word))
+
+
+# Ex 13: Write a program to split a given string on hyphens and display each substring.
+str1 = "Emma-is-a-data-scientist"
+
+for i in str1.split("-"):
+    print(i)
+
+
+# Ex 14: Remove empty strings from a list of strings
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+
+for str in str_list:
+    if str == "" or str == None:
+        str_list.remove(str)
+
+print(str_list)
+
+# or use filter() function
+new_str_list = list(filter(None, str_list))
+print(new_str_list)
+
+
+# Ex 15: Remove special symbols / punctuation from a string
+
+str1 = "/*Jon is @developer & musician"
+new_str = str1.translate(str.maketrans('', '', string.punctuation))
+
+print("New string is : ", new_str)
+
+
+# Ex 16: Removal all characters from a string except integers
+str1 = 'I am 25 years and 10 months old'
+num_str = ""
+for i in str1:
+    if i.isdigit():
+        num_str += i
+
+print(num_str)
