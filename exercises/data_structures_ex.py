@@ -16,3 +16,15 @@ def even_odd_List(l1, l2):
 l1 = [3, 6, 9, 12, 15, 18, 21]
 l2 = [4, 8, 12, 16, 20, 24, 28]
 even_odd_List(l1, l2)
+
+
+# Ex 2: Write a program to remove the item present at index 4
+# and add it to the 2nd position and at the end of the list.
+list1 = [54, 44, 27, 79, 91, 41]
+
+element = list1[4]  # 91
+list1.pop(4)
+list1.insert(2, element)
+list1.append(element)
+
+print(list1)  # [54, 44, 91, 27, 79, 41, 91]
